@@ -3,10 +3,8 @@ using System;
 class Program
 {
     // Exceed the requirements:
-    // - Each word, with its closest punctuation mark, is replaced 
-    // by as many underscores as there are characters in the word, to help the 
-    // user's memory.
-    // - Check Random not select words already hidden.
+    // - Check Random action not select words already hidden.
+    // - "_" = number of letters in word.
 
     static void Main(string[] args)
     {
