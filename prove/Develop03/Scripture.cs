@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 class Scripture
 {
-    private ScriptureReference _reference;
+    private Reference _reference;
     private List<string> _words = new List<string>();
 
-    public Scripture(ScriptureReference reference, string text)
+    public Scripture(Reference reference, string text)
     {
         _reference = reference;
         _words = ConvertToWordList(text);

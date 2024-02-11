@@ -1,13 +1,13 @@
 using System;
 
-class ScriptureReference
+class Reference
 {
     private string _book;
     private int _chapter;
     private int _startVerse;
     private int _endVerse;
 
-    public ScriptureReference(string book, int chapter, int startVerse)
+    public Reference(string book, int chapter, int startVerse)
     {
         _book = book;
         _chapter = chapter;
@@ -15,7 +15,7 @@ class ScriptureReference
         _endVerse = 0;
     }
 
-    public ScriptureReference(string book, int chapter, int startVerse, int endVerse)
+    public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         _book = book;
         _chapter = chapter;
