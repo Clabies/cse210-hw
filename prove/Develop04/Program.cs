@@ -3,6 +3,11 @@ using System.Runtime.Versioning;
 
 class Program
 {
+    /* 
+    Exceeding Requirements: 
+    - Track statistics per user.
+    - Elements selected randomly, do not repeat.
+    */  
     static void Main(string[] args)
     {
         MenuInterface();
