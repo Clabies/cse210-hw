@@ -15,7 +15,7 @@ class Activity
         Console.WriteLine();
         Console.WriteLine(_activityDescription);
         Console.WriteLine();
-        Console.Write("How many seconds, would you like for your session? ");
+        Console.Write("How many seconds would you like for your session? ");
     }
 
     public void DisplayEndingMessage(){
