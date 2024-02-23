@@ -2,26 +2,26 @@ using System;
 
 public class StationaryBicycle : Activity
 {
-    private double speed;
+    private double _speed;
 
     public StationaryBicycle(DateTime date, int lengthInMinutes, double speed) 
         : base(date, lengthInMinutes)
     {
-        this.speed = speed;
+        _speed = speed;
     }
 
     public override double GetDistance()
     {
-        return (speed * base.lengthInMinutes) / 60;
+        return (_speed * _lengthInMinutes) / 60;
     }
 
     public override double GetSpeed()
     {
-        return speed;
+        return _speed;
     }
 
     public override double GetPace()
     {
-        return 60 / speed;
+        return 60 / _speed;
     }
 }

@@ -1,26 +1,27 @@
 using System;
+
 public class Running : Activity
 {
-    private double distance;
+    private double _distance;
 
     public Running(DateTime date, int lengthInMinutes, double distance) 
         : base(date, lengthInMinutes)
     {
-        this.distance = distance;
+        _distance = distance;
     }
 
     public override double GetDistance()
     {
-        return distance;
+        return _distance;
     }
 
     public override double GetSpeed()
     {
-        return (distance / base.lengthInMinutes) * 60;
+        return (_distance / _lengthInMinutes) * 60;
     }
 
     public override double GetPace()
     {
-        return base.lengthInMinutes / distance;
+        return _lengthInMinutes / _distance;
     }
 }

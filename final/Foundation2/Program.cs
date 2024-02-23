@@ -25,7 +25,7 @@ class Program
         {
             Name = "Product 1",
             ProductId = 1,
-            PricePerUnit = 10,
+            Price_Per_Unit = 10,
             Quantity = 2
         };
 
@@ -33,19 +33,19 @@ class Program
         {
             Name = "Product 2",
             ProductId = 2,
-            PricePerUnit = 20,
+            Price_Per_Unit = 20,
             Quantity = 1
         };
 
         // Create order
         var order1 = new Order(customer1);
-        order1.AddProduct(product1);
-        order1.AddProduct(product2);
+        order1.Add_Product(product1);
+        order1.Add_Product(product2);
 
         // Display order details
-        Console.WriteLine(order1.GetPackingLabel());
-        Console.WriteLine(order1.GetShippingLabel());
-        Console.WriteLine($"Total Price: ${order1.CalculateTotalCost()}");
+        Console.WriteLine(order1.Get_Packing_Label());
+        Console.WriteLine(order1.Get_Shipping_Label());
+        Console.WriteLine($"Total Price: ${order1.Calculate_Total_Cost()}");
 
         // Create another order for demonstration
         var address2 = new Address
@@ -66,16 +66,16 @@ class Program
         {
             Name = "Product 3",
             ProductId = 3,
-            PricePerUnit = 15,
+            Price_Per_Unit = 15,
             Quantity = 3
         };
 
         var order2 = new Order(customer2);
-        order2.AddProduct(product3);
+        order2.Add_Product(product3);
 
         Console.WriteLine("\n=== Second Order ===");
-        Console.WriteLine(order2.GetPackingLabel());
-        Console.WriteLine(order2.GetShippingLabel());
-        Console.WriteLine($"Total Price: ${order2.CalculateTotalCost()}");
+        Console.WriteLine(order2.Get_Packing_Label());
+        Console.WriteLine(order2.Get_Shipping_Label());
+        Console.WriteLine($"Total Price: ${order2.Calculate_Total_Cost()}");
     }
 }

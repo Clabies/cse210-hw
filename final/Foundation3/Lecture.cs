@@ -2,23 +2,23 @@ using System;
 
 public class Lecture : Event
 {
-    private string speaker;
-    private int capacity;
+    private string _speaker;
+    private int _capacity;
 
     public Lecture(string title, string description, DateTime date, TimeSpan time, Address address, string speaker, int capacity)
         : base(title, description, date, time, address)
     {
-        this.speaker = speaker;
-        this.capacity = capacity;
+        _speaker = speaker;
+        _capacity = capacity;
     }
 
     public override string GetFullDetails()
     {
-        return base.GetFullDetails() + $"\nType: Lecture\nSpeaker: {speaker}\nCapacity: {capacity}";
+        return base.GetFullDetails() + $"\nType: Lecture\nSpeaker: {_speaker}\nCapacity: {_capacity}";
     }
 
     public override string GetShortDescription()
     {
-        return $"Type of Event: Lecture\nTitle: {title}\nDate: {date.ToShortDateString()}";
+        return $"Type of Event: Lecture\nTitle: {_title}\nDate: {_date.ToShortDateString()}";
     }
 }

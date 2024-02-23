@@ -2,21 +2,21 @@ using System;
 
 public class Address
 {
-    private string street;
-    private string city;
-    private string stateProvince;
-    private string country;
+    private string _street;
+    private string _city;
+    private string _stateProvince;
+    private string _country;
 
     public Address(string street, string city, string stateProvince, string country)
     {
-        this.street = street;
-        this.city = city;
-        this.stateProvince = stateProvince;
-        this.country = country;
+        _street = street;
+        _city = city;
+        _stateProvince = stateProvince;
+        _country = country;
     }
 
     public override string ToString()
     {
-        return $"{street}, {city}, {stateProvince}, {country}";
+        return $"{_street}, {_city}, {_stateProvince}, {_country}";
     }
 }

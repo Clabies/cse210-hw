@@ -4,39 +4,39 @@ using System.Linq;
 
 public class Order
 {
-    private List<Product> products;
-    private Customer customer;
+    private List<Product> _products;
+    private Customer _customer;
 
     public Order(Customer customer)
     {
-        this.customer = customer;
-        products = new List<Product>();
+        _customer = customer;
+        _products = new List<Product>();
     }
 
-    public void AddProduct(Product product)
+    public void Add_Product(Product product)
     {
-        products.Add(product);
+        _products.Add(product);
     }
 
-    public decimal CalculateTotalCost()
+    public decimal Calculate_Total_Cost()
     {
-        decimal totalCost = products.Sum(product => product.TotalCost);
-        totalCost += customer.IsInUSA() ? 5 : 35; // Shipping cost
-        return totalCost;
+        decimal total_cost = _products.Sum(product => product.Total_Cost);
+        total_cost += _customer.Is_In_USA() ? 5 : 35; // Shipping cost
+        return total_cost;
     }
 
-    public string GetPackingLabel()
+    public string Get_Packing_Label()
     {
-        string packingLabel = "Packing Label:\n";
-        foreach (var product in products)
+        string packing_label = "Packing Label:\n";
+        foreach (var product in _products)
         {
-            packingLabel += $"{product.Name} - {product.ProductId}\n";
+            packing_label += $"{product.Name} - {product.ProductId}\n";
         }
-        return packingLabel;
+        return packing_label;
     }
 
-    public string GetShippingLabel()
+    public string Get_Shipping_Label()
     {
-        return $"Shipping Label:\n{customer.Name}\n{customer.Address}";
+        return $"Shipping Label:\n{_customer.Name}\n{_customer.Address}";
     }
 }

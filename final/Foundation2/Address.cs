@@ -9,7 +9,7 @@ public class Address
     public string StateProvince { get; set; }
     public string Country { get; set; }
 
-    public bool IsInUSA()
+    public bool Is_In_USA()
     {
         return Country.Equals("USA", StringComparison.OrdinalIgnoreCase);
     }

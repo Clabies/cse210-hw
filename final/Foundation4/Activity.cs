@@ -2,13 +2,13 @@ using System;
 
 public abstract class Activity
 {
-    protected DateTime date;
-    protected int lengthInMinutes;
+    protected DateTime _date;
+    protected int _lengthInMinutes;
 
     public Activity(DateTime date, int lengthInMinutes)
     {
-        this.date = date;
-        this.lengthInMinutes = lengthInMinutes;
+        _date = date;
+        _lengthInMinutes = lengthInMinutes;
     }
 
     public abstract double GetDistance();
@@ -17,6 +17,6 @@ public abstract class Activity
 
     public virtual string GetSummary()
     {
-        return $"{date.ToShortDateString()} {GetType().Name} ({lengthInMinutes} min) - Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
+        return $"{_date.ToShortDateString()} {GetType().Name} ({_lengthInMinutes} min) - Distance: {GetDistance()} miles, Speed: {GetSpeed()} mph, Pace: {GetPace()} min per mile";
     }
 }

@@ -2,21 +2,21 @@ using System;
 
 public class Reception : Event
 {
-    private string rsvpEmail;
+    private string _rsvpEmail;
 
     public Reception(string title, string description, DateTime date, TimeSpan time, Address address, string rsvpEmail)
         : base(title, description, date, time, address)
     {
-        this.rsvpEmail = rsvpEmail;
+        _rsvpEmail = rsvpEmail;
     }
 
     public override string GetFullDetails()
     {
-        return base.GetFullDetails() + $"\nType: Reception\nRSVP Email: {rsvpEmail}";
+        return base.GetFullDetails() + $"\nType: Reception\nRSVP Email: {_rsvpEmail}";
     }
 
     public override string GetShortDescription()
     {
-        return $"Type of Event: Reception\nTitle: {title}\nDate: {date.ToShortDateString()}";
+        return $"Type of Event: Reception\nTitle: {_title}\nDate: {_date.ToShortDateString()}";
     }
 }

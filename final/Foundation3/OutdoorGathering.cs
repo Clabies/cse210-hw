@@ -2,21 +2,21 @@ using System;
 
 public class OutdoorGathering : Event
 {
-    private string weatherForecast;
+    private string _weatherForecast;
 
     public OutdoorGathering(string title, string description, DateTime date, TimeSpan time, Address address, string weatherForecast)
         : base(title, description, date, time, address)
     {
-        this.weatherForecast = weatherForecast;
+        _weatherForecast = weatherForecast;
     }
 
     public override string GetFullDetails()
     {
-        return base.GetFullDetails() + $"\nType: Outdoor Gathering\nWeather Forecast: {weatherForecast}";
+        return base.GetFullDetails() + $"\nType: Outdoor Gathering\nWeather Forecast: {_weatherForecast}";
     }
 
     public override string GetShortDescription()
     {
-        return $"Type of Event: Outdoor Gathering\nTitle: {title}\nDate: {date.ToShortDateString()}";
+        return $"Type of Event: Outdoor Gathering\nTitle: {_title}\nDate: {_date.ToShortDateString()}";
     }
 }

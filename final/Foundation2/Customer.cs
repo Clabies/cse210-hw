@@ -7,8 +7,8 @@ public class Customer
     public string Name { get; set; }
     public Address Address { get; set; }
 
-    public bool IsInUSA()
+    public bool Is_In_USA()
     {
-        return Address.IsInUSA();
+        return Address.Is_In_USA();
     }
 }
